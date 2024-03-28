@@ -1,15 +1,16 @@
 image:
-  repository: krumware/baseline-vue-app
+  repository: travispenn/baseline-vue-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
-imagePullSecrets: []
+imagePullSecrets: 
+  - name: docker-pull-secret
 service:
   type: ClusterIP
   port: 80
 ingress:
   enabled: true
-  className: "nginx"
+  className: "traefik"
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
   #   kubernetes.io/ingress.class: nginx
