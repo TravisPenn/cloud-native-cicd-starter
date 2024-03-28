@@ -2,7 +2,8 @@ image:
   repository: travispenn/baseline-vue-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+
+  tag: "20240328T202209"
 imagePullSecrets: 
   - name: docker-pull-secret
 service:
